@@ -10,8 +10,8 @@ Requirements
 ------------
 
 JSLightTimeline require :  
-      + Twitter Bootstrap's css and javscript 2.2.2  
-      + JQuery >=1.8.3  
+      + [Twitter Bootstrap](https://github.com/twitter/bootstrap)'s css and javscript 2.2.2  
+      + [JQuery](https://github.com/jquery/jquery) >=1.8.3  
 
 Installation
 ------------
@@ -58,7 +58,9 @@ Installation
 Documentation
 -------------
 
-//TODO
+#### Dot object ####
+Dot object are just Twitter Bootstrap popover object wich i added a 'date' attribute  
+See [Twitter Bootstrap Popover Documenation](http://twitter.github.com/bootstrap/javascript.html#popovers "Popover Documentation") for more informations
 
 Contributing
 ------------
@@ -69,5 +71,6 @@ If you'd like to contribute, fork, improve and send me a pull request.
 License
 ----------------------
 
-JSLightTimeline is release under MIT Licence conditions.
-See License file.
+JSLightTimeline is release under MIT Licence conditions.  
+See License file.  
+Copyright (c) 2012 Yoan Roullard  
