@@ -5,12 +5,17 @@
         <title></title>
         <link type="text/css" href="assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen" />
         <link type="text/css" href="assets/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen" />
-        <link type="text/css" href="assets/design.css" rel="stylesheet" media="screen" />
+        <link type="text/css" href="assets/jsLightTimeline.css" rel="stylesheet" media="screen" />
     </head>
     <body>
+        <div id="container">
+            <div id="timeline">
+            </div>
+
+            <div id="timeline2">
+            </div>
+    </div>
         
-        <div id="timeline">
-        </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/jsLightTimeline.js"></script>
@@ -30,26 +35,40 @@
                 };
                 var dot1 = {
                     title : "Another date in the timeline",
-                    content : "Another date <br/> in the timeline",
+                    content : "Content with <h4>html</h4>",
                     trigger : "hover",
                     date : "2012",
                     html :true
                 };
                 var dot2 = {
                     title : "Boostrap",
-                    content : "This project use Twitter Bootstrap for popover's style",
+                    content : "This project use Twitter Bootstrap for popover",
                     trigger : "hover",
-                    date : "2012",
-                    html :true
+                    date : "Bootstrap powered"
                 };
                 var dot3 = {
-                    title : "Born",
-                    content : "My born",
-                    trigger : "hover",
-                    date : "Born"
+                    title : "On click",
+                    content : "This popover is visible when you click on the dot",
+                    trigger : "click",
+                    date : "Click on dot"
                 };
                 dots.push(dot0, dot1,dot2,dot3);
-                $("#timeline").jsLightTimeline({dots:dots,orientation :"vertical"});
+                $("#timeline").jsLightTimeline({dots:dots});
+                
+                $("#timeline2").jsLightTimeline({dots:[
+                        {
+                            title : "Horizontal Timeline",
+                            content : "You can make vertical AND horizontal timeline",
+                            trigger : "hover",
+                            date : "Vertical timeline"
+                        },
+                        {
+                            title : "Horizontal Timeline",
+                            content : "You can make vertical AND horizontal timeline",
+                            trigger : "hover",
+                            date : "2012"
+                        }
+            ],orientation:"horizontal"});
                 
             
             });
