@@ -16,24 +16,41 @@ JSLightTimeline require :
 Installation
 ------------
 1. Make sure you have include all required dependencies to your page  
-		```html
-		<head>  
-			<link type="text/css" href="assets/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen" />    
-        		<link type="text/css" href="assets/jsLightTimeline.css" rel="stylesheet" media="screen" />  
-		</head>  
-		<body>		
-			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>  
-        			<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>  
-        			<script type="text/javascript" src="js/jsLightTimeline.js"></script>  
-		</body>
-		```
+```html
+<head>
+	<!-- Your code -->	
+	<link type="text/css" href="assets/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen" />    
+        	<link type="text/css" href="assets/jsLightTimeline.css" rel="stylesheet" media="screen" />  
+</head>  
+<body>	
+	<!-- Your code -->	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>  
+        	<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>  
+        	<script type="text/javascript" src="js/jsLightTimeline.js"></script>  
+</body>
+```
 2. Add a div element to your page and add some jquery   
 ```html
-<script>
-
-	var camera, scene, renderer;
-	var geometry, material, mesh;
-</script>
+<body>
+	<div id="myTimeline"></div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var dot0 = {
+				title: "My Title",
+				content: "Popover's content",
+				trigger : "hover",
+				date : "now"
+			};
+			var dot1 = {
+				title: "My second Title",
+				content: "Another Popover's content",
+				trigger : "hover",
+				date : "2012"
+			};
+			$("#myTimeline").jsLightTimeline({dots[dot0,dot1]});
+		});	
+	</script>
+</body>
 ```  
 
 Documentation

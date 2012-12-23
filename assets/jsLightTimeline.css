@@ -1,0 +1,63 @@
+
+/* ------------------ TIMELINE STYLE --------------------*/
+.timeline{
+    margin :auto;
+    
+    background: gray;
+    box-shadow: inset 0px 0px 1px rgba(255,255,255,0.8);
+}
+.timeline-vertical{
+    
+    margin-top:  80px;
+    width: 4px;
+}
+
+.timeline-horizontal{
+    margin-top:  250px;
+    margin-left :400px;
+    height: 4px;
+    display :inline-block;
+}
+/* ------------------ DOTS STYLE --------------------*/
+.dot{
+    width: 1em; height: 1em;
+    -webkit-border-radius: 0.5em; 
+    -moz-border-radius: 0.5em;
+    background: grey;
+    position: relative;
+}
+.dot-vertical{
+    top: -2px;
+    left:-5px;
+    margin-top: 35px;
+    top :0px;
+}
+.dot-horizontal{    
+    display: inline-block;
+    top :-5px;
+    margin-left: 33px;
+}
+.dotStart-horizontal{
+    display: inline-block;
+    top :-5px;
+    margin-left: -10px;
+}
+
+.date{
+    width:40px;
+    
+}
+.date-horizontal{
+    
+    margin-top: 25px;
+    margin-left :-15px;
+    display: block;
+    -webkit-transform: rotate(-90deg); 
+    -moz-transform: rotate(-90deg)
+}
+.date-vertical{
+    position: absolute;
+    right: 50px;
+    bottom: 0px;
+}
+
