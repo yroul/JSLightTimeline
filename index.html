@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+        <link type="text/css" href="assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen" />
+        <link type="text/css" href="assets/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen" />
+        <link type="text/css" href="assets/design.css" rel="stylesheet" media="screen" />
+    </head>
+    <body>
+        
+        <div id="timeline">
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/jsLightTimeline.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                
+                var currentTime = new Date();
+                var month = currentTime.getMonth() + 1;
+                var day = currentTime.getDate();
+                var year = currentTime.getFullYear();
+                var dots = new Array();
+                var dot0 = {
+                    title : "Now",
+                    content : "Today is "+month + "/" + day + "/" + year,
+                    trigger : "hover",
+                    date : "now"
+                };
+                var dot1 = {
+                    title : "Another date in the timeline",
+                    content : "Another date <br/> in the timeline",
+                    trigger : "hover",
+                    date : "2012",
+                    html :true
+                };
+                var dot2 = {
+                    title : "Boostrap",
+                    content : "This project use Twitter Bootstrap for popover's style",
+                    trigger : "hover",
+                    date : "2012",
+                    html :true
+                };
+                var dot3 = {
+                    title : "Born",
+                    content : "My born",
+                    trigger : "hover",
+                    date : "Born"
+                };
+                dots.push(dot0, dot1,dot2,dot3);
+                $("#timeline").jsLightTimeline({dots:dots,orientation :"vertical"});
+                
+            
+            });
+            
+        </script>
+    </body>
+</html>
