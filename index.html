@@ -30,11 +30,59 @@
       <section>
         <h3>Welcome to JSLightTimeline</h3>
       </section>
+      <section id="container">
+        <div id="timeline">
+        </div>
+      </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/yroul">yroul</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/bootstrap.js"></script>
+    <script type="text/javascript" src="javascript/jsLightTimeline.js"></script>
+    <script type="text/javascript">
+            $(document).ready(function(){
+                
+                var currentTime = new Date();
+                var month = currentTime.getMonth() + 1;
+                var day = currentTime.getDate();
+                var year = currentTime.getFullYear();
+                var dots = new Array();
+                var dot0 = {
+                    title : "Now",
+                    content : "Today is "+month + "/" + day + "/" + year,
+                    trigger : "hover",
+                    date : "now"
+                };
+                var dot1 = {
+                    title : "Another date in the timeline",
+                    content : "Content with <h4>html</h4>",
+                    trigger : "hover",
+                    date : "2012",
+                    html :true
+                };
+                var dot2 = {
+                    title : "Boostrap",
+                    content : "This project use Twitter Bootstrap for popover",
+                    trigger : "hover",
+                    date : "Bootstrap powered"
+                };
+                var dot3 = {
+                    title : "On click",
+                    content : "This popover is visible when you click on the dot",
+                    trigger : "click",
+                    date : "Click on dot"
+                };
+                dots.push(dot0, dot1,dot2,dot3);
+                $("#timeline").jsLightTimeline({dots:dots});              
+               
+                
+            
+            });
+            
+        </script>
     <script src="javascripts/scale.fix.js"></script>
     
   </body>
